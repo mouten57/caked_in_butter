@@ -3,10 +3,30 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: `Caked in Butter`,
+    menuLinks: [
+      {
+        name: 'ABOUT',
+        link: '/about'
+      },
+      {
+        name: 'CONTACT',
+        link: '/contact'
+      },
+      {
+        name: 'RECIPES',
+        link: '/recipes'
+      }
+    ],
     siteUrl: `https://www.cakedinbutter.com`,
     description: `For all the best baked goods.`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,6 +35,7 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`
   ]
 };
