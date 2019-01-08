@@ -21,7 +21,7 @@ const Layout = ({ children }) => (
     render={data => (
       <React.Fragment>
         <Helmet
-          title={'tite'}
+          title={'Caked in Butter'}
           meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' }

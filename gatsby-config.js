@@ -5,6 +5,10 @@ module.exports = {
     title: `Caked in Butter`,
     menuLinks: [
       {
+        name: 'HOME',
+        link: '/'
+      },
+      {
         name: 'ABOUT',
         link: '/about'
       },

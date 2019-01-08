@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 import Layout from '../components/layout';
 
 export default ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <div style={{ textAlign: 'center' }}>
