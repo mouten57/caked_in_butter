@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
-import { Helmet } from 'react-helmet';
+import Head from '../components/head';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -20,13 +20,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <React.Fragment>
-        <Helmet
-          title={'Caked in Butter'}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' }
-          ]}
-        />
+        <Head />
         <Header
           menuLinks={data.site.siteMetadata.menuLinks}
           siteTitle={data.site.siteMetadata.title}

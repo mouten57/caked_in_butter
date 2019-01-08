@@ -1,4 +1,12 @@
 import React from 'react';
-import Layout from '../components/layout';
+import PageTemplate from '../components/PageTemplate';
+import Carousel from '../components/imageCarousel';
 
-export default () => <Layout>Recipes page!</Layout>;
+export default () => (
+  <PageTemplate>
+    <div>
+      <h1 className="page-title">Recipes page!</h1>
+    </div>
+    <Carousel />
+  </PageTemplate>
+);

@@ -3,20 +3,36 @@
   max-width: 100%;
   float: none;
 }
+.featured-subheader {
+  display: block;
+  border-bottom: none;
+  width: 100%;
+  height: auto;
+  margin: 10px auto 30px;
+}
+.featured-subheader h4 {
+  position: relative;
+  display: block;
+  text-align: center;
+  color: inherit;
+  text-transform: uppercase;
+}
+.featured-subheader li {
+  color: inherit;
+}
 
 .entry-content {
   padding: 0 45px;
 }
 .page-title {
   text-transform: uppercase;
-  margin-top: 4%;
   color: #444444;
   letter-spacing: 4px;
   font-weight: 400;
 }
 h1.page-title {
   text-align: center;
-  margin-top: 4%;
+  padding-top: 4%;
 }
 
 article.page {
