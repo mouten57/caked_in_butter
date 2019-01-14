@@ -1,8 +1,13 @@
 const path = require(`path`);
+const config = require('./data/Siteconfig');
 
 module.exports = {
   siteMetadata: {
-    title: `Caked in Butter`,
+    siteUrl: config.siteUrl,
+    title: config.siteTitle,
+    author: config.siteTitle,
+    description: config.description,
+    copyright: config.copyright,
     menuLinks: [
       {
         name: 'HOME',
@@ -25,6 +30,32 @@ module.exports = {
     description: `For all the best baked goods.`
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: config.themeColor
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'standalone',
+        icon: `content/assets/header-logo.png`
+      }
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -40,6 +71,7 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`
   ]
 };
