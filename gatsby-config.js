@@ -38,8 +38,8 @@ module.exports = {
         path: `${__dirname}/content/assets`
       }
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`
   ]
 };
