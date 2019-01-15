@@ -1,4 +1,5 @@
 import React from 'react';
+import './recipeLayout.css';
 
 export default props => (
   <header className="entry-header">
