@@ -24,7 +24,7 @@ export default props => {
       <div
         style={{
           borderRadius: '10px',
-          padding: '10px'
+          padding: '10px 10px 30px'
         }}
       >
         <ul style={{ margin: '0px' }}> {dots} </ul>
