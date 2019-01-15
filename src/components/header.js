@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 //import headerLogo from '../../content/assets/header-logo.png';
 import Img from 'gatsby-image';
 
-const Header = props => (
+export default props => (
   <StaticQuery
     query={graphql`
       query HeaderLogo {
@@ -68,4 +68,3 @@ const Header = props => (
     )}
   />
 );
-export default Header;
