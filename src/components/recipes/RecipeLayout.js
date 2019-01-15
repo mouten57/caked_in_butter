@@ -34,10 +34,7 @@ const RecipeLayout = props => {
         <p className="entry-body">{props.body3}</p>
 
         <div style={imageStyle}>
-          <Img
-            style={{ display: 'inherit', width: '100%' }}
-            fixed={props.image2}
-          />
+          <Img style={{ display: 'inherit' }} fixed={props.image2} />
         </div>
         <p className="entry-body">{props.body4}</p>
         <p className="entry-body">{props.body5}</p>
