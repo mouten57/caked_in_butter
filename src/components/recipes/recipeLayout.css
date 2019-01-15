@@ -1,0 +1,97 @@
+.entry-main {
+  color: #444444;
+}
+
+.entry-header {
+  padding: 38px 20px;
+  text-align: center;
+}
+
+.entry-meta {
+  font-size: 10px;
+  margin-bottom: 0;
+  font-family: Noto Serif KR;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.entry-divider {
+  border-top: 1px solid;
+  display: block;
+  max-width: 27px;
+  margin: 0 auto 20px;
+  color: inherit;
+}
+
+.entry-title {
+  letter-spacing: 4px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.recipe-box {
+  color: #444444;
+  font-family: Noto Serif KR;
+  border: 1px solid;
+  padding: 7%;
+  margin: 3% auto;
+}
+
+.recipe-name,
+.recipe-yield {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.recipe-name {
+  letter-spacing: 4px;
+}
+
+.recipe-yield {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.recipe-detail h4 {
+  font-family: Noto Serif KR;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.recipe-detail {
+  margin-bottom: 3%;
+  font-family: inherit;
+  line-height: 2em;
+  width: 100%;
+  display: block;
+}
+
+.recipe-detail p {
+  margin-top: 10px;
+}
+
+.recipe-ingredients {
+  width: 40%;
+  padding-right: 5%;
+  display: table-cell;
+}
+
+.recipe-ingredients ul,
+.recipe-ingredients li {
+  list-style-type: none;
+  list-style-position: inside;
+  margin-left: 0;
+}
+.recipe-instructions ol,
+.recipe-instructions li {
+  list-style-position: inside;
+  margin: 0;
+}
+
+.recipe-instructions {
+  width: 55%;
+  display: table-cell;
+}

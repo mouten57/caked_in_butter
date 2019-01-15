@@ -9,7 +9,7 @@ export default props => {
     <PageTemplate>
       <Img
         style={{ margin: '0 -43px' }}
-        fluid={props.data.file.childImageSharp.fluid}
+        fluid={props.data.profile.childImageSharp.fluid}
       />
       <h1 className="page-title">About</h1>
 
@@ -44,7 +44,7 @@ export default props => {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "profile-placeholder.jpg" }) {
+    profile: file(relativePath: { eq: "profile-placeholder.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.

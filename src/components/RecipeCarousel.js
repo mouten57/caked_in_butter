@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import './imageCarousel.css';
+import './recipeCarousel.css';
 
 import bakery1 from '../../content/assets/bakery1.jpg';
 import bakery2 from '../../content/assets/bakery2.jpg';

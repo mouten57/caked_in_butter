@@ -10,10 +10,6 @@ module.exports = {
     copyright: config.copyright,
     menuLinks: [
       {
-        name: 'HOME',
-        link: '/'
-      },
-      {
         name: 'ABOUT',
         link: '/about'
       },

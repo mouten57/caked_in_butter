@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
-import headerLogo from '../../content/assets/header-logo.png';
+//import headerLogo from '../../content/assets/header-logo.png';
+import Img from 'gatsby-image';
 
 const Header = props => (
   <StaticQuery
@@ -10,8 +11,8 @@ const Header = props => (
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 300) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -42,7 +43,8 @@ const Header = props => (
                   textDecoration: 'none',
                   color: '#444444',
                   fontFamily: 'Noto Serif KR',
-                  fontSize: '12px'
+                  fontSize: '10px',
+                  letterSpacing: '3px'
                 }}
                 to={link.link}
               >
@@ -53,13 +55,10 @@ const Header = props => (
         </nav>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <a href="/">
-            <img
-              src={headerLogo}
+            <Img
+              fixed={data.file.childImageSharp.fixed}
               style={{
-                margin: '0 auto',
-                display: 'centered',
-                maxHeight: '70vw',
-                maxWidth: '500px'
+                display: 'inherit'
               }}
               alt="logo"
             />
