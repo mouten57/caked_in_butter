@@ -20,10 +20,10 @@ export default props => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    // speed: 500,
-    // autoplaySpeed: 5000,
-    // cssEase: 'linear',
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 5000,
+    cssEase: 'linear',
     adaptiveHeight: true,
     appendDots: dots => (
       <div
