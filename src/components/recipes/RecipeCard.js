@@ -7,7 +7,7 @@ import EntryHeader from '../recipes/entryHeader';
 export default props => (
   <div className="recipe-card">
     <a href={props.slug}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ display: 'grid', justifyContent: 'center' }}>
         <Img
           fixed={props.fixed}
           style={{ display: 'inherit', margin: '0 auto' }}

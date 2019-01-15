@@ -1,13 +1,8 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Slider from 'react-slick';
 import './recipeCarousel.css';
-
-import bakery1 from '../../content/assets/bakery1.jpg';
-import bakery2 from '../../content/assets/bakery2.jpg';
-import bakery3 from '../../content/assets/bakery3.jpg';
-import bakery4 from '../../content/assets/bakery4.jpg';
 
 import EntryHeader from '../components/recipes/entryHeader';
 import index from '../components/recipes/recipeIndex';
@@ -45,6 +40,17 @@ export default props => {
       </div>
     )
   };
+  const CarouselItem = props => (
+    <div style={{ display: 'inline-block', width: '100%' }}>
+      <a href={props.slug}>
+        <Img
+          fixed={props.fixed}
+          style={{ display: 'inherit', margin: '20px auto 0' }}
+        />
+      </a>
+      <EntryHeader category={props.category} title={props.title} />
+    </div>
+  );
 
   return (
     <StaticQuery
@@ -54,7 +60,7 @@ export default props => {
             edges {
               node {
                 childImageSharp {
-                  fixed(width: 300) {
+                  fixed(width: 325) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -66,43 +72,27 @@ export default props => {
       render={data => (
         <div className="featured-subheader">
           <Slider {...settings}>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <a href="/recipes/strawberry-donuts">
-                <Img
-                  fixed={data.allFile.edges[0].node.childImageSharp.fixed}
-                  style={{ display: 'inherit', margin: '20px auto 0' }}
-                />
-              </a>
-              <EntryHeader
-                category={index.BakedStrawberryDonuts.category}
-                title={index.BakedStrawberryDonuts.title}
-              />
-            </div>
+            {/* clean up these divs.. helper function? */}
+            <CarouselItem
+              slug="/recipes/strawberry-donuts"
+              fixed={data.allFile.edges[0].node.childImageSharp.fixed}
+              category={index.BakedStrawberryDonuts.category}
+              title={index.BakedStrawberryDonuts.title}
+            />
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <a href="/recipes/strawberry-donuts">
-                <Img
-                  fixed={data.allFile.edges[0].node.childImageSharp.fixed}
-                  style={{ display: 'inherit', margin: '20px auto 0' }}
-                />
-              </a>
-              <EntryHeader
-                category={index.BakedStrawberryDonuts.category}
-                title={index.BakedStrawberryDonuts.title}
-              />
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <a href="/recipes/strawberry-donuts">
-                <Img
-                  fixed={data.allFile.edges[0].node.childImageSharp.fixed}
-                  style={{ display: 'inherit', margin: '20px auto 0' }}
-                />
-              </a>
-              <EntryHeader
-                category={index.BakedStrawberryDonuts.category}
-                title={index.BakedStrawberryDonuts.title}
-              />
-            </div>
+            <CarouselItem
+              slug="/recipes/strawberry-donuts"
+              fixed={data.allFile.edges[0].node.childImageSharp.fixed}
+              category={index.BakedStrawberryDonuts.category}
+              title={index.BakedStrawberryDonuts.title}
+            />
+
+            <CarouselItem
+              slug="/recipes/strawberry-donuts"
+              fixed={data.allFile.edges[0].node.childImageSharp.fixed}
+              category={index.BakedStrawberryDonuts.category}
+              title={index.BakedStrawberryDonuts.title}
+            />
           </Slider>
         </div>
       )}

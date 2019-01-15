@@ -1,18 +1,15 @@
 import React from 'react';
 import PageTemplate from '../PageTemplate';
 import './recipeLayout.css';
-import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import EntryHeader from './entryHeader';
 
 const RecipeLayout = props => {
   const imageStyle = {
-    display: 'flex',
+    display: 'grid',
     justifyContent: 'center',
-    width: '136%',
-    margin: '0 0 20px',
-    right: '22%',
-    position: 'relative'
+    width: '100%',
+    margin: '0 0 20px'
   };
 
   return (
@@ -37,7 +34,10 @@ const RecipeLayout = props => {
         <p className="entry-body">{props.body3}</p>
 
         <div style={imageStyle}>
-          <Img style={{ display: 'inherit' }} fixed={props.image2} />
+          <Img
+            style={{ display: 'inherit', width: '100%' }}
+            fixed={props.image2}
+          />
         </div>
         <p className="entry-body">{props.body4}</p>
         <p className="entry-body">{props.body5}</p>

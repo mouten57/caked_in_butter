@@ -51,7 +51,7 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 300) {
+        fixed(width: 320) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -60,7 +60,7 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 300) {
+        fixed(width: 320) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -69,7 +69,7 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 300) {
+        fixed(width: 320) {
           ...GatsbyImageSharpFixed
         }
       }

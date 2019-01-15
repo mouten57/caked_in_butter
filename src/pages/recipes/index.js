@@ -1,7 +1,7 @@
 import React from 'react';
 import PageTemplate from '../../components/PageTemplate';
-import Carousel from '../../components/RecipeCarousel';
-import { Link, StaticQuery, graphql } from 'gatsby';
+
+import { StaticQuery, graphql } from 'gatsby';
 import RecipeCard from '../../components/recipes/RecipeCard';
 import index from '../../components/recipes/recipeIndex';
 
@@ -14,7 +14,7 @@ export default () => (
           edges {
             node {
               childImageSharp {
-                fixed(width: 300) {
+                fixed(width: 325) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -25,7 +25,7 @@ export default () => (
     `}
     render={data => (
       <PageTemplate>
-        <h1 className="page-title" />
+        <h1 className="page-title"> </h1>
         {/* Baked Strawberry Donuts */}
         <RecipeCard
           slug="/recipes/strawberry-donuts"

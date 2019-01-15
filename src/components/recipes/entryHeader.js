@@ -1,5 +1,4 @@
 import React from 'react';
-import index from '../../components/recipes/recipeIndex';
 
 export default props => (
   <header className="entry-header">
