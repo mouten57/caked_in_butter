@@ -47,29 +47,29 @@ export default props => {
 
 export const query = graphql`
   query RecipeImages {
-    main: file(relativePath: { eq: "StrawberryDonuts/card-image.jpg" }) {
+    main: file(relativePath: { eq: "recipeImages/strwdonuts-card-image.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 350) {
+        fixed(width: 300) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    image1: file(relativePath: { eq: "StrawberryDonuts/img1.jpg" }) {
+    image1: file(relativePath: { eq: "recipeImages/strwdonuts-img1.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 350) {
+        fixed(width: 300) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    image2: file(relativePath: { eq: "StrawberryDonuts/img2.jpg" }) {
+    image2: file(relativePath: { eq: "recipeImages/strwdonuts-img2.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 350) {
+        fixed(width: 300) {
           ...GatsbyImageSharpFixed
         }
       }

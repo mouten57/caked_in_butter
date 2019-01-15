@@ -3,6 +3,7 @@ import PageTemplate from '../PageTemplate';
 import './recipeLayout.css';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import EntryHeader from './entryHeader';
 
 const RecipeLayout = props => {
   const imageStyle = {
@@ -10,18 +11,18 @@ const RecipeLayout = props => {
     justifyContent: 'center',
     width: '136%',
     margin: '0 0 20px',
-    right: '18%',
+    right: '22%',
     position: 'relative'
   };
 
   return (
     <PageTemplate>
       <div className="entry-main">
-        <header className="entry-header">
-          <p className="entry-meta">{props.category}</p>
-          <span className="entry-divider" />
-          <h1 className="entry-title">{props.title}</h1>
-        </header>
+        <EntryHeader
+          className="entry-header"
+          category={props.category}
+          title={props.title}
+        />
         <div style={imageStyle}>
           <Img style={{ display: 'inherit' }} fixed={props.mainImage} />
         </div>

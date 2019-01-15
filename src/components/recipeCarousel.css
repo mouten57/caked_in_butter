@@ -2,3 +2,15 @@
 .slick-slide * {
   outline: none !important;
 }
+
+.featured-subheader {
+  margin-top: 10px;
+}
+
+.slick-next {
+  right: -10px !important;
+}
+
+.slick-prev {
+  left: -10px !important;
+}
