@@ -7,6 +7,7 @@ import bakery2 from '../../content/assets/bakery2.jpg';
 import bakery3 from '../../content/assets/bakery3.jpg';
 import bakery4 from '../../content/assets/bakery4.jpg';
 
+//need to get the first recipe set-up on here
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
