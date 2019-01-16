@@ -3,6 +3,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import EntryHeader from '../recipes/entryHeader';
+import './RecipeCard.css';
 
 export default props => (
   <div className="recipe-card">
@@ -13,7 +14,8 @@ export default props => (
           style={{ display: 'inherit', margin: '0 auto' }}
         />
       </div>
+
+      <EntryHeader category={props.category} title={props.title} />
     </a>
-    <EntryHeader category={props.category} title={props.title} />
   </div>
 );

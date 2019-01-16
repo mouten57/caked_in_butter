@@ -1,0 +1,15 @@
+.recipe-card > a:link {
+  text-decoration: none;
+  color: inherit;
+}
+.recipe-card > a:visited {
+  text-decoration: none;
+}
+
+.recipe-card > a:active {
+  color: inherit;
+}
+
+.entry-header {
+  color: #444444;
+}

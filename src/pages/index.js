@@ -10,7 +10,7 @@ export default () => {
       <div style={{ textAlign: 'center' }}>
         <hr />
         <div style={{ margin: '0 auto' }} />
-        <p style={{ textAlign: 'center' }}>
+        <p style={{ textAlign: 'center', color: '#444444' }}>
           Stay in touch on{' '}
           <a href="https://www.twitter.com/cakedinbutter">Twitter</a> and{' '}
           <a href="https://www.instagram.com/cakedinbutter">Instagram</a>
