@@ -41,14 +41,15 @@ export default props => {
     )
   };
   const CarouselItem = props => (
-    <div style={{ display: 'inline-block', width: '100%' }}>
+    <div className="carousel-item">
       <a href={props.slug}>
         <Img
           fixed={props.fixed}
           style={{ display: 'inherit', margin: '20px auto 0' }}
         />
+
+        <EntryHeader category={props.category} title={props.title} />
       </a>
-      <EntryHeader category={props.category} title={props.title} />
     </div>
   );
 

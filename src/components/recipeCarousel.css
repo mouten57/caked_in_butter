@@ -14,3 +14,12 @@
 .slick-prev {
   left: -10px !important;
 }
+
+.carousel-item {
+  display: 'inline-block';
+  width: '100%';
+}
+
+.carousel-item > a:link {
+  text-decoration: none;
+}
