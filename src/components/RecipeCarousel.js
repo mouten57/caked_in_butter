@@ -62,6 +62,7 @@ export default props => {
               node {
                 childImageSharp {
                   fixed(width: 325) {
+                    originalName
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -70,26 +71,38 @@ export default props => {
           }
         }
       `}
-      render={data => (
-        <div className="featured-subheader">
-          <Slider {...settings}>
-            {/* clean up these divs.. helper function? */}
-            <CarouselItem
-              slug="/recipes/strawberry-donuts"
-              fixed={data.allFile.edges[0].node.childImageSharp.fixed}
-              category={index.BakedStrawberryDonuts.category}
-              title={index.BakedStrawberryDonuts.title}
-            />
+      render={data => {
+        // for (let node of data.allFile.edges) {
+        //   console.log(node.node.childImageSharp.fixed.originalName);
+        // }
 
-            <CarouselItem
-              slug="/recipes/biscotti"
-              fixed={data.allFile.edges[5].node.childImageSharp.fixed}
-              category={index.Biscotti.category}
-              title={index.Biscotti.title}
-            />
-          </Slider>
-        </div>
-      )}
+        const filterImage = filename => {
+          let ret = data.allFile.edges.filter(
+            node => node.node.childImageSharp.fixed.originalName === filename
+          );
+
+          return ret[0].node.childImageSharp.fixed;
+        };
+        return (
+          <div className="featured-subheader">
+            <Slider {...settings}>
+              <CarouselItem
+                slug="/recipes/strawberry-donuts"
+                fixed={filterImage('strwdonuts-card-image.jpg')}
+                category={index.BakedStrawberryDonuts.category}
+                title={index.BakedStrawberryDonuts.title}
+              />
+
+              <CarouselItem
+                slug="/recipes/biscotti"
+                fixed={filterImage('biscotti-card-image.jpg')}
+                category={index.Biscotti.category}
+                title={index.Biscotti.title}
+              />
+            </Slider>
+          </div>
+        );
+      }}
     />
   );
 };

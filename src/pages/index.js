@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import RecipeCarousel from '../components/RecipeCarousel';
+
 import '../components/recipeCarousel.css';
 import './index.css';
 
