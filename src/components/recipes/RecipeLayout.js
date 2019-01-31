@@ -1,17 +1,9 @@
 import React from 'react';
 import PageTemplate from '../PageTemplate';
 import './recipeLayout.css';
-import Img from 'gatsby-image';
 import EntryHeader from './entryHeader';
 
 const RecipeLayout = props => {
-  const imageStyle = {
-    display: 'grid',
-    justifyContent: 'center',
-    width: '100%',
-    margin: '0 0 20px'
-  };
-
   return (
     <PageTemplate>
       <div className="entry-main">
@@ -20,26 +12,8 @@ const RecipeLayout = props => {
           category={props.category}
           title={props.title}
         />
-        <div style={imageStyle}>
-          <Img style={{ display: 'inherit' }} fixed={props.mainImage} />
-        </div>
-
-        <p className="entry-body">{props.body1}</p>
-
-        <div style={imageStyle}>
-          <Img style={{ display: 'inherit' }} fixed={props.image1} />
-        </div>
-
-        <p className="entry-body">{props.body2}</p>
-        <p className="entry-body">{props.body3}</p>
-
-        <div style={imageStyle}>
-          <Img style={{ display: 'inherit' }} fixed={props.image2} />
-        </div>
-        <p className="entry-body">{props.body4}</p>
-        <p className="entry-body">{props.body5}</p>
-        <p className="entry-body">{props.body6}</p>
-        <p className="entry-body">{props.body7}</p>
+        {/* props.children is body and images */}
+        {props.children}
 
         <div className="recipe-box">
           <div className="recipe-header">
@@ -58,7 +32,7 @@ const RecipeLayout = props => {
             <div className="recipe-ingredients">
               <h4>Ingredients</h4>
               <p>
-                <em>{props.item1name}:</em>
+                <em>{props.item1name}</em>
               </p>
               <ul>
                 {props.item1ingredients.map((ingredient, idx) => {
@@ -67,18 +41,20 @@ const RecipeLayout = props => {
               </ul>
 
               <p>
-                <em>{props.item2name}:</em>
+                <em>{props.item2name ? props.item2name : ''}</em>
               </p>
               <ul>
-                {props.item2ingredients.map((ingredient, idx) => {
-                  return <li key={idx}>{ingredient}</li>;
-                })}
+                {props.item2ingredients
+                  ? props.item2ingredients.map((ingredient, idx) => {
+                      return <li key={idx}>{ingredient}</li>;
+                    })
+                  : null}
               </ul>
             </div>
             <div className="recipe-instructions">
               <h4>Instructions</h4>
               <p>
-                <em>{props.item1short}:</em>
+                <em>{props.item1short}</em>
               </p>
               <ol>
                 {props.item1instructions.map((instruction, idx) => {
@@ -87,12 +63,14 @@ const RecipeLayout = props => {
               </ol>
 
               <p>
-                <em>{props.item2short}:</em>
+                <em>{props.item2short}</em>
               </p>
               <ol>
-                {props.item2instructions.map((instruction, idx) => {
-                  return <li key={idx}>{instruction}</li>;
-                })}
+                {props.item2instructions
+                  ? props.item2instructions.map((instruction, idx) => {
+                      return <li key={idx}>{instruction}</li>;
+                    })
+                  : null}
               </ol>
             </div>
             <div className="recipe-notes">
@@ -111,3 +89,9 @@ const RecipeLayout = props => {
 };
 
 export default RecipeLayout;
+export const imageStyle = {
+  display: 'grid',
+  justifyContent: 'center',
+  width: '100%',
+  margin: '0 0 20px'
+};

@@ -1,0 +1,19 @@
+.index-container {
+  text-align: center;
+}
+
+.index-links {
+  margin: 0 auto;
+}
+
+.index-links p {
+  text-align: center;
+  color: #444444;
+}
+
+.link:visited {
+  color: #444444;
+}
+.link:hover {
+  color: pink;
+}

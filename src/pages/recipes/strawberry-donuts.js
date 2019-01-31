@@ -1,47 +1,93 @@
 import React from 'react';
-import RecipeLayout from '../../components/recipes/RecipeLayout';
+import RecipeLayout, {
+  imageStyle
+} from '../../components/recipes/RecipeLayout';
 import index from '../../components/recipes/recipeIndex';
+import Img from 'gatsby-image';
 
 //map cards for recipes
 export default props => {
   let base = index.BakedStrawberryDonuts;
-  const {
-    category,
-    title,
-    body,
-    ingredients,
-    instructions,
-    notes,
-    closing
-  } = base;
+  const { category, title, ingredients, instructions, notes, closing } = base;
+
   return (
     <RecipeLayout
-      mainImage={props.data.main.childImageSharp.fixed}
-      image1={props.data.image1.childImageSharp.fixed}
-      image2={props.data.image2.childImageSharp.fixed}
       category={category}
       title={title}
-      body1={body[0]}
-      body2={body[1]}
-      body3={body[2]}
-      body4={body[3]}
-      body5={body[4]}
-      body6={body[5]}
-      body7={body[6]}
       yields="8-10 servings"
       prep="10 minutes"
       time="10-12 minutes"
-      item1name="Strawberry Donut"
-      item1short="Donut"
+      item1name="Strawberry Donut:"
+      item1short="Donut: "
       item1ingredients={ingredients.StrawberryDonut}
       item1instructions={instructions.StrawberryDonut}
-      item2name="Donut Icing"
-      item2short="Icing"
+      item2name="Donut Icing:"
+      item2short="Icing:"
       item2ingredients={ingredients.DonutIcing}
       item2instructions={instructions.DonutIcing}
       notes={notes}
       closing={closing}
-    />
+    >
+      <div style={imageStyle}>
+        <Img
+          style={{ display: 'inherit' }}
+          fixed={props.data.main.childImageSharp.fixed}
+        />
+      </div>
+
+      <p className="entry-body">
+        Who doesn’t love a good donut? Whether you’re loyal to Shipley’s, Krispy
+        Kreme, or Dunkin Donuts these baked strawberry donuts are sure to
+        please! It may seem silly but donuts have always reminded me of my
+        childhood. I grew up on the East Coast in North Carolina where Krispy
+        Kreme is king - the ‘HOT’ sign was too tantalizing to ignore. I have
+        fond memories of Saturday morning drives with Dad to pick up donuts for
+        the family before everyone was awake. What’s a Saturday morning without
+        a glazed donut?
+      </p>
+
+      <div style={imageStyle}>
+        <Img
+          style={{ display: 'inherit' }}
+          fixed={props.data.image1.childImageSharp.fixed}
+        />
+      </div>
+
+      <p className="entry-body">
+        These strawberry donuts were inspired by one of my sweet friends who is
+        in her first trimester- she said she had a dream where she asked me to
+        find a recipe for strawberry donuts with sprinkles. So here it is!
+      </p>
+      <p className="entry-body">
+        For this recipe start with the best donut pan; I used the Nordic Ware
+        pan which I loved but any donut pan will do. Keep in mind these donuts
+        are baked, not fried, so they are going to have a different consistency-
+        a bit more cakey but equally as delicious!
+      </p>
+
+      <div style={imageStyle}>
+        <Img
+          style={{ display: 'inherit' }}
+          fixed={props.data.image2.childImageSharp.fixed}
+        />
+      </div>
+      <p className="entry-body">
+        My hips don’t need a deep fryer in my house so baked donuts it is.
+      </p>
+      <p className="entry-body">
+        I used fresh strawberries here but next time I would use freeze dried or
+        even high quality strawberry jam in its place. The fresh strawberries
+        are high in water and although we want moist donuts we don’t want soggy
+        ones. Using fresh fruit with high water content is always risky so don’t
+        be afraid to experiment with different flavoring methods.
+      </p>
+      <p className="entry-body">
+        Douse these beauties in the icing and top with all the sprinkles! These
+        donuts are too delicious to not eat instantly but they will keep for 2-3
+        days in an air tight container.
+      </p>
+      <p className="entry-body">Let’s get cookin!</p>
+    </RecipeLayout>
   );
 };
 

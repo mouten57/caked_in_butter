@@ -82,17 +82,10 @@ export default props => {
             />
 
             <CarouselItem
-              slug="/recipes/strawberry-donuts"
-              fixed={data.allFile.edges[0].node.childImageSharp.fixed}
-              category={index.BakedStrawberryDonuts.category}
-              title={index.BakedStrawberryDonuts.title}
-            />
-
-            <CarouselItem
-              slug="/recipes/strawberry-donuts"
-              fixed={data.allFile.edges[0].node.childImageSharp.fixed}
-              category={index.BakedStrawberryDonuts.category}
-              title={index.BakedStrawberryDonuts.title}
+              slug="/recipes/biscotti"
+              fixed={data.allFile.edges[5].node.childImageSharp.fixed}
+              category={index.Biscotti.category}
+              title={index.Biscotti.title}
             />
           </Slider>
         </div>

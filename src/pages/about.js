@@ -37,7 +37,9 @@ export default props => {
         flour in your hair and bring your loved ones together around something
         buttery and crumbly.
       </p>
-      <p>Bon appetit!</p>
+      <p style={{ textAlign: 'center' }}>
+        <em>Bon appetit!</em>
+      </p>
     </PageTemplate>
   );
 };

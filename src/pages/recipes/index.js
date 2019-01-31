@@ -33,6 +33,12 @@ export default () => (
           category={index.BakedStrawberryDonuts.category}
           title={index.BakedStrawberryDonuts.title}
         />
+        <RecipeCard
+          slug="/recipes/biscotti"
+          fixed={data.allFile.edges[5].node.childImageSharp.fixed}
+          category={index.Biscotti.category}
+          title={index.Biscotti.title}
+        />
       </PageTemplate>
     )}
   />
