@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Slider from 'react-slick';
 import './recipeCarousel.css';
-
+import findImage from '../utils/findImage';
 import EntryHeader from '../components/recipes/entryHeader';
 import index from '../components/recipes/recipeIndex';
 
@@ -71,38 +71,25 @@ export default props => {
           }
         }
       `}
-      render={data => {
-        // for (let node of data.allFile.edges) {
-        //   console.log(node.node.childImageSharp.fixed.originalName);
-        // }
+      render={data => (
+        <div className="featured-subheader">
+          <Slider {...settings}>
+            <CarouselItem
+              slug="/recipes/strawberry-donuts"
+              fixed={findImage(data, 'strwdonuts-card-image.jpg')}
+              category={index.BakedStrawberryDonuts.category}
+              title={index.BakedStrawberryDonuts.title}
+            />
 
-        const filterImage = filename => {
-          let ret = data.allFile.edges.filter(
-            node => node.node.childImageSharp.fixed.originalName === filename
-          );
-
-          return ret[0].node.childImageSharp.fixed;
-        };
-        return (
-          <div className="featured-subheader">
-            <Slider {...settings}>
-              <CarouselItem
-                slug="/recipes/strawberry-donuts"
-                fixed={filterImage('strwdonuts-card-image.jpg')}
-                category={index.BakedStrawberryDonuts.category}
-                title={index.BakedStrawberryDonuts.title}
-              />
-
-              <CarouselItem
-                slug="/recipes/biscotti"
-                fixed={filterImage('biscotti-card-image.jpg')}
-                category={index.Biscotti.category}
-                title={index.Biscotti.title}
-              />
-            </Slider>
-          </div>
-        );
-      }}
+            <CarouselItem
+              slug="/recipes/biscotti"
+              fixed={findImage(data, 'biscotti-card-image-2.jpg')}
+              category={index.Biscotti.category}
+              title={index.Biscotti.title}
+            />
+          </Slider>
+        </div>
+      )}
     />
   );
 };
