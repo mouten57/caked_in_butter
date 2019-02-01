@@ -14,9 +14,9 @@ export default props => {
     <RecipeLayout
       category={category}
       title={title}
-      yields="12 Cookies"
-      prep="20 minutes"
-      time="20 minutes"
+      yields="24 Cookies"
+      prep="10 minutes"
+      time="20 minutes {cooling time}"
       item1name=""
       item1short=""
       item1ingredients={ingredients.DollyDrops}
@@ -67,12 +67,12 @@ export default props => {
         would help me forget that I still had to wait for them to harden in the
         freezer. Clearly my issue with patience is another story...
       </p>
-      <div style={imageStyle}>
+      {/* <div style={imageStyle}>
         <Img
           style={{ display: 'inherit' }}
           fixed={props.data.image3.childImageSharp.fixed}
         />
-      </div>
+      </div> */}
       <p className="entry-body">
         The point is, these could not be more fun to throw together and I’ll bet
         they bring back some childhood memories for you too! I love pulling out
@@ -86,7 +86,7 @@ export default props => {
         />
       </div>
       <p className="entry-body">
-        I can almost guarantee that you have all of these ingredients handy.The
+        I can almost guarantee that you have all of these ingredients handy. The
         best part is..you just use one pot, one pan and 0 baking!
       </p>
     </RecipeLayout>
