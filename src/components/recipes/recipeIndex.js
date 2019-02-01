@@ -67,7 +67,7 @@ These donuts are too delicious to not eat instantly but they will keep for 2-3 d
     `
   },
 
-  //RECIPE #2
+  //RECIPE #2 -> BISCOTTI
   Biscotti: {
     category: 'breakfast',
     title: 'Dark Chocolate & Cherry Biscotti',
@@ -120,5 +120,38 @@ These donuts are too delicious to not eat instantly but they will keep for 2-3 d
       `You can freeze the dough if you plan to make ahead. Thaw overnight.`
     ],
     closing: ``
+  },
+
+  ///DOLLY DROPS
+  DollyDrops: {
+    category: 'Cookies & Bars',
+    title: 'Dolly Drops {No Bake Cookies}',
+    body: [''],
+    ingredients: {
+      DollyDrops: [
+        `3 cups Oats`,
+        `1/2 cup Unsalted Butter`,
+        `1/2 cup Milk`,
+        `3 cups Sugar`,
+        `1/2 cup Peanut Butter(I use crunchy but you can use any nut butter you prefer)`,
+        `1/4 cup Cocoa Powder`,
+        `1 tsp Vanilla`
+      ]
+    },
+    instructions: {
+      DollyDrops: [
+        `Measure out the oats and set aside`,
+        `In a large saucepan or skillet, combine butter, milk, sugar, peanut butter and cocoa`,
+        `Stir constantly over medium heat until completely combined`,
+        `Once it is boiling set the timer for 4 minutes but continue to stir and scrape sides as needed`,
+        `When the timer goes off, remove from heat and add vanilla(it will bubble up)`,
+        `Mix in the oats`,
+        `Scoop the mix onto wax paper`,
+        `Let cool at room temperature for 20 minutes or toss in the fridge for 10–15`
+      ]
+    },
+
+    notes: null,
+    closing: null
   }
 };

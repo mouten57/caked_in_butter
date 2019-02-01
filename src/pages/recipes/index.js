@@ -41,6 +41,13 @@ export default () => (
           category={index.Biscotti.category}
           title={index.Biscotti.title}
         />
+        {/* Dolly Drops */}
+        <RecipeCard
+          slug="/recipes/dolly-drops"
+          fixed={findImage(data, 'dolly-card-image.jpg')}
+          category={index.DollyDrops.category}
+          title={index.DollyDrops.title}
+        />
       </PageTemplate>
     )}
   />

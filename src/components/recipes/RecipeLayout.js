@@ -73,8 +73,9 @@ const RecipeLayout = props => {
                   : null}
               </ol>
             </div>
+
             <div className="recipe-notes">
-              <h4>Notes</h4>
+              <h4>{props.notes ? 'Notes' : ''}</h4>
               <p>{props.notes}</p>
               <p>{props.closing}</p>
               <p style={{ textAlign: 'center' }}>
