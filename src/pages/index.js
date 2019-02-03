@@ -13,7 +13,8 @@ export default () => {
         <hr />
         <div className="index-links" />
         <p>
-          Stay in touch on{' '}
+          Get Social!
+          <br />
           <a className="link" href="https://www.twitter.com/cakedinbutter">
             Twitter
           </a>{' '}

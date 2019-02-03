@@ -78,6 +78,9 @@
   padding-right: 5%;
   display: table-cell;
 }
+.recipe-ingredients p {
+  margin-bottom: 5px;
+}
 
 .recipe-ingredients ul,
 .recipe-ingredients li {
@@ -90,10 +93,25 @@
   list-style-position: inside;
   margin: 0;
 }
+.recipe-instructions li {
+  padding-bottom: 10px;
+}
 
 .recipe-instructions {
   width: 55%;
   display: table-cell;
+}
+.recipe-instructions p {
+  margin-bottom: 5px;
+}
+.recipe-notes ul,
+.recipe-notes li {
+  list-style: none;
+  margin: 3px;
+  padding: 0;
+}
+.recipe-closing h4 {
+  margin-top: 20px;
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -48,6 +48,13 @@ export default () => (
           category={index.DollyDrops.category}
           title={index.DollyDrops.title}
         />
+        {/* Turtle Brownies */}
+        <RecipeCard
+          slug="/recipes/turtle-brownies"
+          fixed={findImage(data, 'turtleBrownies-card-image.jpg')}
+          category={index.TurtleBrownies.category}
+          title={index.TurtleBrownies.title}
+        />
       </PageTemplate>
     )}
   />

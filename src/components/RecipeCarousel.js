@@ -94,6 +94,12 @@ export default props => {
               category={index.DollyDrops.category}
               title={index.DollyDrops.title}
             />
+            <CarouselItem
+              slug="/recipes/turtle-brownies"
+              fixed={findImage(data, 'turtleBrownies-card-image.jpg')}
+              category={index.TurtleBrownies.category}
+              title={index.TurtleBrownies.title}
+            />
           </Slider>
         </div>
       )}

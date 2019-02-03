@@ -62,7 +62,9 @@ These donuts are too delicious to not eat instantly but they will keep for 2-3 d
       ]
     },
 
-    notes: `*If you do not have buttermilk (and lets be honest, who does?), combine 1 cup milk and one tablespoon white vinegar or lemon juice.`,
+    notes: [
+      `*If you do not have buttermilk (and lets be honest, who does?), combine 1 cup milk and one tablespoon white vinegar or lemon juice.`
+    ],
     closing: `Enjoy for breakfast with coffee or for lunch.. or dinner. Because we’re adults and we can eat donuts whenever we want. 
     `
   },
@@ -107,16 +109,16 @@ These donuts are too delicious to not eat instantly but they will keep for 2-3 d
     },
     instructions: {
       Biscotti: [
-        `Preheat oven to 350. Line your baking sheet with parchment paper.I also use a piece for my work surface for easy clean up.`,
-        `Whisk flour, brown sugar, baking powder, cinnamon and salt together until combined.Using either a pastry cutter or 2 forks cut in the butter.The dough will be crumbly.Stir in the dried cherries.In a medium bowl whisk the eggs, oil and extract.Pour the wet ingredients into the flour/ butter mixture and is until just combined.Overworking causes tough dough!`,
-        `Turn the dough onto your lightly floured work surface.Knead very lightly until the dough is soft.If it’s too sticky to handle add one tablespoon of flour at a time- be careful to not add too much.Divide the dough and place each slab on the baking sheet.Form them into rectangles about 1/2 inch thick. Brush with egg wash.`,
-        `Bake for 25 - 30 minutes(depending on your oven), or until the top of the biscotti is browned.Remove from oven.Let the biscotti rest for 10 minutes but do not turn off the oven.Slice the slabs into 1 inch sections and turn on their sides on the baking sheet.Bake for 8 - 10 minutes on each side.They may still be soft when they come out but they will harden as they cool on the rack.`,
-        `Melt the baking chocolate in the microwave in 30 second bursts.Don’t burn it! Dip the biscotti into the chocolate and let cool on the rack or in the freezer.Sprinkle with additional dried cherries if you wish!`
+        `Preheat oven to 350. Line your baking sheet with parchment paper. I also use a piece for my work surface for easy clean up.`,
+        `Whisk flour, brown sugar, baking powder, cinnamon and salt together until combined. Using either a pastry cutter or 2 forks cut in the butter. The dough will be crumbly. Stir in the dried cherries. In a medium bowl whisk the eggs, oil and extract. Pour the wet ingredients into the flour/ butter mixture and is until just combined. Overworking causes tough dough!`,
+        `Turn the dough onto your lightly floured work surface. Knead very lightly until the dough is soft. If it’s too sticky to handle add one tablespoon of flour at a time- be careful to not add too much. Divide the dough and place each slab on the baking sheet. Form them into rectangles about 1/2 inch thick. Brush with egg wash.`,
+        `Bake for 25 - 30 minutes(depending on your oven), or until the top of the biscotti is browned. Remove from oven. Let the biscotti rest for 10 minutes but do not turn off the oven. Slice the slabs into 1 inch sections and turn on their sides on the baking sheet. Bake for 8 - 10 minutes on each side. They may still be soft when they come out but they will harden as they cool on the rack.`,
+        `Melt the baking chocolate in the microwave in 30 second bursts. Don’t burn it! Dip the biscotti into the chocolate and let cool on the rack or in the freezer. Sprinkle with additional dried cherries if you wish!`
       ]
     },
 
     notes: [
-      `If they’ll last that long... the biscotti will stay fresh for 1-2 weeks in a sealed container.`,
+      `If they’ll last that long... the biscotti will stay fresh for 1-2 weeks in a sealed container. `,
       `You can freeze the dough if you plan to make ahead. Thaw overnight.`
     ],
     closing: ``
@@ -151,7 +153,62 @@ These donuts are too delicious to not eat instantly but they will keep for 2-3 d
       ]
     },
 
-    notes: null,
+    notes: [],
+    closing: null
+  },
+
+  //Turtle Brownies
+  TurtleBrownies: {
+    category: 'Desserts',
+    title: 'Turtle Brownies',
+    ingredients: {
+      Carmel: [
+        `½ cup sugar`,
+        `4 tablespoons unsalted butter`,
+        `3 tablespoons heavy cream`,
+        `1 teaspoon vanilla extract`,
+        `⅛ teaspoon of salt, or ¼ teaspoon sea salt`
+      ],
+      Brownies: [
+        `3 oz unsweetened baking chocolate`,
+        `½ cup unsalted butter(1 stick)`,
+        `1 cup sugar`,
+        `2 eggs`,
+        `1 teaspoon vanilla extract`,
+        `⅛ teaspoon salt, or ¼ teaspoon sea salt`
+      ]
+    },
+    instructions: {
+      First: 'Heat oven to 200 degrees (for pecans)',
+      Caramel: [
+        `In a saucepan, over medium heat, melt the sugar.This will take about 5 minutes. Stir to get rid of any clumps.`,
+        `Once sugar is a copper color remove from heat and add butter. Stirring constantly to incorporate.`,
+        `Over medium - high heat add the cream and salt and bring to a simmer.`,
+        `Cook for a few more minutes until it is a dark copper color.`,
+        `Pour over parchment on a plate. Let sit in freezer until solid. This could take 20-40 minutes.`
+      ],
+      Pecans: [
+        `Line a cookie sheet with parchment paper and spread chopped pecans evenly`,
+        `Bake for 8 - 10 minutes, watching closely so they do not burn.`,
+        `Let cool while you mix your batter.`
+      ],
+      Btwn2_and_3: 'Turn oven up to 350 while the caramel is in the freezer.',
+      Brownies: [
+        `Melt chocolate and butter in a saucepan.`,
+        `Once melted remove from heat and whisk in sugar, eggs(one at a time), vanilla and salt. Stir in flour.`
+      ],
+      Assemble: [
+        `Chop into squares and add ¾ of the caramel to the batter. You must do this very quickly or the caramel will soften too much and become one giant glob in the batter.`,
+        `Mix together and pour the batter into an 8x8 pan lined with parchment and sprayed with non - stick spray.`,
+        `Top the batter with additional caramel squares and toasted pecans.`,
+        `Bake for 30 minutes or until toothpick comes out clean.`
+      ]
+    },
+
+    notes: [
+      `Cooling can be sped up by placing in freezer. These are easiest to cut when they are completely cooled. `,
+      `These will keep in an airtight container for 5 - 7 days.`
+    ],
     closing: null
   }
 };

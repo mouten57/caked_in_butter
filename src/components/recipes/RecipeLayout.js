@@ -54,6 +54,9 @@ const RecipeLayout = props => {
             <div className="recipe-instructions">
               <h4>Instructions</h4>
               <p>
+                <em>{props.first_note}</em>
+              </p>
+              <p>
                 <em>{props.item1short}</em>
               </p>
               <ol>
@@ -72,16 +75,46 @@ const RecipeLayout = props => {
                     })
                   : null}
               </ol>
+              <p>
+                <em>{props.between_2_and_3_note}</em>
+              </p>
+              <p>
+                <em>{props.item3short}</em>
+              </p>
+              <ol>
+                {props.item3instructions
+                  ? props.item3instructions.map((instruction, idx) => {
+                      return <li key={idx}>{instruction}</li>;
+                    })
+                  : null}
+              </ol>
+              <p>
+                <em>{props.assemble ? 'Assemble: ' : null}</em>
+              </p>
+              <ol>
+                {props.assemble
+                  ? props.assemble.map((instruction, idx) => {
+                      return <li key={idx}>{instruction}</li>;
+                    })
+                  : null}
+              </ol>
             </div>
 
             <div className="recipe-notes">
-              <h4>{props.notes ? 'Notes' : ''}</h4>
-              <p>{props.notes}</p>
-              <p>{props.closing}</p>
-              <p style={{ textAlign: 'center' }}>
-                <em>Bon appetit! </em>
-              </p>
+              <h4>{props.notes.length > 0 ? 'Notes' : ''}</h4>
+              <ul>
+                {props.notes.map((note, idx) => {
+                  return <li>{note}</li>;
+                })}
+              </ul>
             </div>
+            <div className="recipe-closing">
+              <h4>{props.closing ? 'In closing...' : ''}</h4>
+              <p>{props.closing}</p>
+            </div>
+            <p style={{ textAlign: 'center' }}>
+              <em>Bon appetit! </em>
+            </p>
           </div>
         </div>
       </div>
