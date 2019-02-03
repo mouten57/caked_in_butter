@@ -29,7 +29,6 @@ export default props => {
       item2instructions={instructions.Pecans}
       item3instructions={instructions.Brownies}
       between_2_and_3_note="Turn oven up to 350 while the caramel is in the freezer."
-      item3instructions={instructions.Brownies}
       assemble={instructions.Assemble}
       notes={notes}
     >

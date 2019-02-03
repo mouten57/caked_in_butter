@@ -7,7 +7,7 @@ class Head extends React.Component {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Caked in Butter</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="canonical" href="https://www.cakedinbutter.com" />
         <link
           rel="stylesheet"
           type="text/css"
