@@ -55,6 +55,13 @@ export default () => (
           category={index.TurtleBrownies.category}
           title={index.TurtleBrownies.title}
         />
+        {/* Red Velvet Cake Bites */}
+        <RecipeCard
+          slug="/recipes/red-velvet-cake-bites"
+          fixed={findImage(data, 'cakeBites-card-image.jpg')}
+          category={index.RedVelvetCakeBites.category}
+          title={index.RedVelvetCakeBites.title}
+        />
       </PageTemplate>
     )}
   />

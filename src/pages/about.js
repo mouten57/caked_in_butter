@@ -46,11 +46,11 @@ export default props => {
 
 export const query = graphql`
   query {
-    profile: file(relativePath: { eq: "profile-placeholder.jpg" }) {
+    profile: file(relativePath: { eq: "AboutMe.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }

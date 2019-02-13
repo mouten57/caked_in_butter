@@ -210,5 +210,35 @@ These donuts are too delicious to not eat instantly but they will keep for 2-3 d
       `These will keep in an airtight container for 5 - 7 days.`
     ],
     closing: null
+  },
+  //Red Velvet Cake Bites
+  RedVelvetCakeBites: {
+    category: 'Desserts',
+    title: '{Be My Valentine} Red Velvet Cake Bites',
+    ingredients: {
+      CakeBites: [
+        `1 box mix red velvet cake`,
+        `1/2 container of cream cheese icing`,
+        `¾ cup mini chocolate chips`,
+        `1 ½ cup white baking chocolate`
+      ]
+    },
+    instructions: {
+      CakeBites: [
+        `Follow directions on box mix and bake cake (line bottom of pan with non - stick spray and parchment paper for easy removal).`,
+        `Let cool completely.`,
+        `In a large mixing bowl, break apart the cake until there are no large pieces of cake.`,
+        `Add cream cheese icing and chocolate chips and mix until incorporated.`,
+        `Roll batter into 1 inch balls and place on lined cookie sheet.`,
+        `Let set in freezer for 20 minutes.`,
+        `Melt white chocolate in a microwave safe bowl in 30 second bursts, stirring in between.`,
+        `Drizzle the cake bites with chocolate and top with sprinkles if you want.`,
+        `Place back in freezer for 5 minutes before serving.`
+      ]
+    },
+    notes: [
+      `These are best served cold and last up to a week in an airtight container in the fridge.`
+    ],
+    closing: null
   }
 };

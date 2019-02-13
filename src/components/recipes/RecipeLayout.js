@@ -104,7 +104,7 @@ const RecipeLayout = props => {
               <h4>{props.notes.length > 0 ? 'Notes' : ''}</h4>
               <ul>
                 {props.notes.map((note, idx) => {
-                  return <li>{note}</li>;
+                  return <li key={idx}>{note}</li>;
                 })}
               </ul>
             </div>
