@@ -1,9 +1,9 @@
 .MuiButton-label-229 > a {
-  color: white;
-  text-decoration: none;
+  color: white !important;
+  text-decoration: none !important;
 }
 
 .MuiButton-label-229 > a:visited {
-  color: white;
-  text-decoration: none;
+  color: white !important;
+  text-decoration: none !important;
 }
