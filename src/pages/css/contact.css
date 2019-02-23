@@ -1,9 +1,9 @@
-.MuiButton-label-229 > a {
+a.go_back {
   color: white !important;
   text-decoration: none !important;
 }
 
-.MuiButton-label-229 > a:visited {
+.go_back a:visited {
   color: white !important;
   text-decoration: none !important;
 }

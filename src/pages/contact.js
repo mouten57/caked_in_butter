@@ -202,7 +202,9 @@ class ContactUsPage extends React.Component {
                     />
                     <div className={classes.textCenter}>
                       <Button color="primary" round style={{ width: '40%' }}>
-                        <a href="/">Go Back</a>
+                        <a href="/" className="go_back">
+                          Go Back
+                        </a>
                       </Button>
                       <Button
                         color="primary"
