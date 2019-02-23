@@ -28,12 +28,11 @@ export default props => {
       notes={notes}
       closing={closing}
     >
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.main.childImageSharp.fixed}
-        />
-      </div>
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.main.childImageSharp.fluid}
+      />
 
       <p className="entry-body">
         Who doesn’t love a good donut? Whether you’re loyal to Shipley’s, Krispy
@@ -46,12 +45,11 @@ export default props => {
         a glazed donut?
       </p>
 
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image1.childImageSharp.fixed}
-        />
-      </div>
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.image1.childImageSharp.fluid}
+      />
 
       <p className="entry-body">
         These strawberry donuts were inspired by one of my sweet friends who is
@@ -65,12 +63,12 @@ export default props => {
         a bit more cakey but equally as delicious!
       </p>
 
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image2.childImageSharp.fixed}
-        />
-      </div>
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.image2.childImageSharp.fluid}
+      />
+
       <p className="entry-body">
         My hips don’t need a deep fryer in my house so baked donuts it is.
       </p>
@@ -97,8 +95,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -106,8 +104,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -115,8 +113,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

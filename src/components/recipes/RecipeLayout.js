@@ -5,7 +5,7 @@ import EntryHeader from './entryHeader';
 
 const RecipeLayout = props => {
   return (
-    <PageTemplate>
+    <PageTemplate headerImg={true}>
       <div className="entry-main">
         <EntryHeader
           className="entry-header"
@@ -124,8 +124,8 @@ const RecipeLayout = props => {
 
 export default RecipeLayout;
 export const imageStyle = {
-  display: 'grid',
-  justifyContent: 'center',
-  width: '100%',
-  margin: '0 0 20px'
+  display: 'inherit',
+  maxWidth: '500px',
+  margin: '0px auto',
+  imageDiv: { paddingBottom: '15px' }
 };

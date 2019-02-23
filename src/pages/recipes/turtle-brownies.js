@@ -32,12 +32,12 @@ export default props => {
       assemble={instructions.Assemble}
       notes={notes}
     >
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.main.childImageSharp.fixed}
-        />
-      </div>
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.main.childImageSharp.fluid}
+      />
+
       <p className="entry-body">
         This week I have craved something so rich and chocolatey. Honestly, I
         don’t know when I’m not craving something rich and chocolatey… but it’s
@@ -56,12 +56,12 @@ export default props => {
         I am then you’re going to love this decadent brownie! It is packed with
         smooth sea salt caramel and toasted pecans. SO YUMMY!
       </p>
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image1.childImageSharp.fixed}
-        />
-      </div>
+
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.image1.childImageSharp.fluid}
+      />
 
       <p className="entry-body">
         I had never made caramel before because it sounded so hard… the heating
@@ -79,12 +79,12 @@ export default props => {
           <li>Fudge Brownie</li>
         </ol>
       </p>
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image2.childImageSharp.fixed}
-        />
-      </div>
+
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.image2.childImageSharp.fluid}
+      />
 
       <p className="entry-body">
         In order to simplify this I like to use nuts that are already chopped so
@@ -109,8 +109,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -118,8 +118,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -127,8 +127,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

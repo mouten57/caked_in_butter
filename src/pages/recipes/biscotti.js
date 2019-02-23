@@ -4,7 +4,7 @@ import RecipeLayout, {
 } from '../../components/recipes/RecipeLayout';
 import index from '../../components/recipes/recipeIndex';
 import Img from 'gatsby-image';
-import './biscotti.css';
+import './css/biscotti.css';
 
 export default props => {
   let base = index.Biscotti;
@@ -25,12 +25,11 @@ export default props => {
       item2instructions={instructions.DonutIcing}
       notes={notes}
     >
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.main.childImageSharp.fixed}
-        />
-      </div>
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.main.childImageSharp.fluid}
+      />
 
       <p className="entry-body">
         Valentine’s Day - the day you show your love to those around you. You
@@ -39,12 +38,11 @@ export default props => {
         biscotti to add to your romantic V-day breakfast.
       </p>
 
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image1.childImageSharp.fixed}
-        />
-      </div>
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.image1.childImageSharp.fluid}
+      />
 
       <p className="entry-body">
         I’ve never been a huge fan of Valentine’s Day. I try to show my love to
@@ -61,12 +59,12 @@ export default props => {
         If you don’t like chocolate, I’m not sure we were really ever friends...
       </p>
 
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image2.childImageSharp.fixed}
-        />
-      </div>
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.image2.childImageSharp.fluid}
+      />
+
       <p className="entry-body">
         {' '}
         For those of you who haven’t seen this crunchy cookie being sold at
@@ -134,8 +132,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -143,8 +141,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -152,8 +150,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

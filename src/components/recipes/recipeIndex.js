@@ -240,5 +240,32 @@ These donuts are too delicious to not eat instantly but they will keep for 2-3 d
       `These are best served cold and last up to a week in an airtight container in the fridge.`
     ],
     closing: null
+  },
+  //Chocolate Chip Blondies
+  Blondies: {
+    category: 'Desserts',
+    title: 'Classic Chocolate Chip Blondies',
+    ingredients: {
+      Blondies: [
+        `½ cup butter, melted and slightly cooled`,
+        `1 cup brown sugar`,
+        `1 egg beaten`,
+        `1 tablespoon vanilla extract`,
+        `1 cup flour`,
+        `Pinch of salt`,
+        `¼ cup chocolate chips, or candy of your choice`
+      ]
+    },
+    instructions: {
+      Blondies: [
+        `Preheat oven to 350 and prepare a 9x13 baking pan with non-stick spray and parchment paper for easy release.`,
+        `Mix the butter and brown sugar until combined and mix in the egg and vanilla extract.`,
+        `Fold in the flour, salt and chocolate chips.`,
+        `Pour batter into the prepared pan and bake for 25-30 minutes depending on your oven. The top will be shiny.`,
+        `Let cool before cutting.`
+      ]
+    },
+    notes: [],
+    closing: null
   }
 };

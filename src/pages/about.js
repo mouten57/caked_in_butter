@@ -4,11 +4,11 @@ import Img from 'gatsby-image';
 import PageTemplate from '../components/PageTemplate';
 
 export default props => {
-  console.log(props);
   return (
-    <PageTemplate>
+    <PageTemplate headerImg={true}>
       <Img
-        style={{ margin: '0 -43px' }}
+        fadeIn={false}
+        style={{ margin: '0 auto', maxWidth: '650px' }}
         fluid={props.data.profile.childImageSharp.fluid}
       />
       <h1 className="page-title">About</h1>

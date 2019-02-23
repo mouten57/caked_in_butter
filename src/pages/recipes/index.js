@@ -62,6 +62,13 @@ export default () => (
           category={index.RedVelvetCakeBites.category}
           title={index.RedVelvetCakeBites.title}
         />
+        {/* Chocolate Chip Blondies */}
+        <RecipeCard
+          slug="/recipes/chocolate-chip-blondies"
+          fixed={findImage(data, 'blondies-card-image.jpg')}
+          category={index.Blondies.category}
+          title={index.Blondies.title}
+        />
       </PageTemplate>
     )}
   />

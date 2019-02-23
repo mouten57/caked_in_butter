@@ -4,7 +4,6 @@ import RecipeLayout, {
 } from '../../components/recipes/RecipeLayout';
 import index from '../../components/recipes/recipeIndex';
 import Img from 'gatsby-image';
-import './biscotti.css';
 
 export default props => {
   let base = index.DollyDrops;
@@ -23,12 +22,12 @@ export default props => {
       item1instructions={instructions.DollyDrops}
       notes={notes}
     >
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.main.childImageSharp.fixed}
-        />
-      </div>
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.main.childImageSharp.fluid}
+      />
+
       <p className="entry-body">
         My memory these days doesn’t serve me well. I have a newborn so I’m
         mostly surviving on coffee as strong as an ox and Jesus as strong
@@ -38,12 +37,12 @@ export default props => {
         me help her make these Uber easy and delicious Dolly Drops, commonly
         known as No Bake Cookies.
       </p>
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image1.childImageSharp.fixed}
-        />
-      </div>
+
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.image1.childImageSharp.fluid}
+      />
 
       <p className="entry-body">
         {' '}
@@ -54,12 +53,13 @@ export default props => {
         on the property. I think you know what I’m getting at here and since
         this is a food blog that's as much name clarification I will give.
       </p>
-      <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image2.childImageSharp.fixed}
-        />
-      </div>
+
+      <Img
+        style={imageStyle}
+        imgStyle={imageStyle.imageDiv}
+        fluid={props.data.image2.childImageSharp.fluid}
+      />
+
       <p className="entry-body">
         We used to make these all the time growing up and I loved them so much
         because I didn’t have to wait for them to bake. I could eat the batter
@@ -67,12 +67,7 @@ export default props => {
         would help me forget that I still had to wait for them to harden in the
         freezer. Clearly my issue with patience is another story...
       </p>
-      {/* <div style={imageStyle}>
-        <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image3.childImageSharp.fixed}
-        />
-      </div> */}
+
       <p className="entry-body">
         The point is, these could not be more fun to throw together and I’ll bet
         they bring back some childhood memories for you too! I love pulling out
@@ -81,8 +76,9 @@ export default props => {
       </p>
       <div style={imageStyle}>
         <Img
-          style={{ display: 'inherit' }}
-          fixed={props.data.image4.childImageSharp.fixed}
+          style={imageStyle}
+          imgStyle={imageStyle.imageDiv}
+          fluid={props.data.image4.childImageSharp.fluid}
         />
       </div>
       <p className="entry-body">
@@ -99,8 +95,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -108,8 +104,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -117,8 +113,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -127,8 +123,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -136,8 +132,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

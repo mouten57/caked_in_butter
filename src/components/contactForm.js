@@ -72,7 +72,6 @@ class ContactForm extends Component {
   };
 
   render() {
-    console.log(this.state);
     const { name, email, message } = this.state;
     return (
       <div>
@@ -81,7 +80,12 @@ class ContactForm extends Component {
         <Form
           action="https://formspree.io/cakedinbutter@gmail.com"
           method="POST"
-          style={{ textAlign: 'center' }}
+          style={{
+            textAlign: 'center',
+            maxWidth: '500px',
+            margin: '0 auto',
+            padding: '5% 3%'
+          }}
         >
           <div className="form-input">
             <label>Name</label>
