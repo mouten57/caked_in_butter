@@ -5,27 +5,10 @@ import { StaticQuery, graphql } from 'gatsby';
 import contactUsStyle from '../../content/assets/jss/views/contactUsStyle.jsx';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import Favorite from '@material-ui/icons/Favorite';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Header from './header';
 import Head from './head';
 import Footer from '../components/Footer/Footer';
-
-const footerContent = (
-  <div className="index-container">
-    <p>
-      Get Social!
-      <br />
-      <a className="link" href="https://www.twitter.com/cakedinbutter">
-        Twitter
-      </a>{' '}
-      and{' '}
-      <a className="link" href="https://www.instagram.com/cakedinbutter">
-        Instagram
-      </a>
-    </p>
-  </div>
-);
 
 const PageTemplate = props => {
   const { classes } = props;
@@ -68,7 +51,7 @@ const PageTemplate = props => {
             </main>
           </div>
           <Footer
-            theme="light"
+            theme="white"
             content={
               <div>
                 <div className={classes.left}>

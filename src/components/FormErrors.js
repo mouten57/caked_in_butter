@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FormErrors = ({ formErrors }) => {
-  console.log(formErrors);
   return (
     <div className="formErrors">
       {Object.keys(formErrors).map((fieldName, i) => {
