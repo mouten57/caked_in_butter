@@ -267,5 +267,32 @@ These donuts are too delicious to not eat instantly but they will keep for 2-3 d
     },
     notes: [],
     closing: null
+  },
+  //Flourless Chocolate Chip Cookies
+  FlourlessChocolateChipCookies: {
+    category: 'Coookies & Bars',
+    title: 'Flourless Chocolate Chip Cookies',
+    ingredients: {
+      Cookies: [
+        `1-½ cup powdered sugar`,
+        `⅓ cup unsweetened cocoa powder`,
+        `Pinch of salt`,
+        `1 or 2 large egg whites at room temperature`,
+        `1 teaspoon vanilla extract`,
+        `½ cup semi-sweet chocolate chips`
+      ]
+    },
+    instructions: {
+      Cookies: [
+        `Preheat the oven to 350 degrees and line your baking sheet with parchment paper and spray with non-stick spray.`,
+        `In a large bowl, mix together the powdered sugar, cocoa and salt.`,
+        `Add vanilla extract and one egg white at a time. For thicker cookies, only use 1 egg white.`,
+        `Fold in the chocolate chips.`,
+        `Spoon the batter onto your baking sheet and leave room between each cookie for spreading.`,
+        `Bake for 12 minutes or until the tops are glossy and cracked.`
+      ]
+    },
+    notes: [],
+    closing: null
   }
 };

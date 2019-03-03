@@ -112,6 +112,12 @@ export default props => {
               category={index.Blondies.category}
               title={index.Blondies.title}
             />
+            <CarouselItem
+              slug="/recipes/flourless-chocolate-chip-cookies"
+              fixed={findImage(data, 'flourlessCC-card-image.jpg')}
+              category={index.FlourlessChocolateChipCookies.category}
+              title={index.FlourlessChocolateChipCookies.title}
+            />
           </Slider>
         </div>
       )}

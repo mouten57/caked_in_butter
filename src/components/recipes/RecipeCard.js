@@ -6,12 +6,12 @@ import EntryHeader from '../recipes/entryHeader';
 import './RecipeCard.css';
 
 export default props => (
-  <div className="recipe-card">
+  <div className="recipe-card" style={{ width: '100%' }}>
     <a href={props.slug}>
-      <div style={{ display: 'grid', justifyContent: 'center' }}>
+      <div style={{ justifyContent: 'center' }}>
         <Img
           fixed={props.fixed}
-          style={{ display: 'inherit', margin: '0 auto' }}
+          style={{ display: 'inherit', margin: '0 auto', maxWidth: '100%' }}
         />
       </div>
 
